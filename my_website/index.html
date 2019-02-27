@@ -1,0 +1,81 @@
+<html lang="en"><!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+   <div class="content">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="images/Nuke.mp4" alt="Video of nuke. Public domain. Taken in 1959" type="video/mp4">
+</video>
+<div class="content">
+    <a href="index.html" style="color:white">Home</a>
+    <a href="aboutme.html" style="color:white">About Me</a>
+    <a href="portfolio.html" style="color:white">Portfolio</a>
+    <a href="resume.html" style="color:white">Resume</a>
+    <a href="Tips and Tricks.html" style="color:white">Tips and Tricks</a>
+  <h1>Nukes Underwater are Cool</h1>
+  <p>Here's a video of a nuke underwater. Taken in 1959.</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+</html>
